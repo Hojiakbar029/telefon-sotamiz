@@ -5,7 +5,7 @@ let elInp = document.querySelector('.inp')
 let dataArr = [
     {
         id:1,
-        img: '',
+        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.zoodmall.uz%2Fen%2Fproduct%2F17040700%2Fmobilnyy-telefon-nokia-6310-2021%2F&psig=AOvVaw1C6PrlblD4ZQsB3KUvY1q0&ust=1674538281125000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOjdvp2W3fwCFQAAAAAdAAAAABAE',
         name: 'Nokia',
         color: 'black',
         model: 'Fly',
@@ -67,7 +67,7 @@ elForm.addEventListener('submit', (evn)=>{
     const newDataArr = []
     elList.innerHTML = ''
     dataArr.forEach((e)=> {
-        if(e.name.toLocaleLowerCase().indexOf(inpVal.trim().toLocaleLowerCase()) !=-1 || e.model.toLocaleUpperCase().indexOf(inpVal.trim().toLocaleUpperCase() !=-1)) {
+        if(e.name.toLowerCase().indexOf(inpVal.trim().toLowerCase()) !=-1 || e.model.toLowerCase().indexOf(inpVal.trim().toLowerCase() )!=-1) {
             newDataArr.push(e);
             let newLi = document.createElement('li')
             newLi.innerHTML = `<div class="card">
@@ -85,19 +85,3 @@ elForm.addEventListener('submit', (evn)=>{
 })
 
 
-
-// elForm.addEventListener('submit', (evn)=>{
-//     evn.preventDefault()
-//     const freeDataArr = []
-//     dataArr.freeDataArr((e)=>{
-//         if(e.indexOf(elInp.value) != -1){
-//             freeDataArr.push(e)
-//         }
-//     })
-//     elList.innerHTML = ''
-//     freeDataArr.freeDataArr((model)=>{
-//         let newLi = document.createElement('li')
-//         newLi.textContent = model
-//         elList.appendChild(newLi)
-//     })
-// })
